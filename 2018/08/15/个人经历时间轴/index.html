@@ -317,6 +317,16 @@ initial-scale=1, maximum-scale=1"/>
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/15/个人经历时间轴/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/15/个人经历时间轴/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -368,7 +378,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX1+RMV1EmAF8Zl1yMXsXv0lQ86B/4ls6jijgzw2kmpnnutSnxh2zSZvmezArGv8u8CB2BXibYxAZq5zBA4Z1fanNI9syuUzQIEaD2nNTChhjZqLmMm1Rur7IUnBftaa7vjC1bgMWZSfLilHg+OlkO8IgUobkoFivq7cgrRw6KzeJk0hod1x/ahC3IbUS+v4qsOky9ktohSxrpLFa92kbEi7xLCCZlsvi3ZvqomTUIQXHgv3Wpc4sLQoklKkSmiZMEKiaAjYfp/wOXygHSEHcs230Jnb9RJ+nwP39Epn28I5S8RuLpDe82riwwXoQW4Cl7S2M6jLXl68kS5P5X12dTwtfoqxntJLXHjadhkTENfpuz3MRU+CGOcpRDnUXAM+ydMs2xEiK9idltMJPRAiaf3w243jLPYJbu/EFU0Wq2mK4Bw4K6/ZWMqQWMv5m4PAEPpiOMBRW98X1JuruQkaVj3rzFJQDH4I0aD7M8ODVEy49aotBoIBCO6El2X89sVzOinyY9FTNw0qXag==</div>
+<div id="enc_content" style="display:none">U2FsdGVkX1+bC88DZiQ2+1OznECay8CC1DNMC5NzzwqBiu4iBcDMGp1z9S6RaP04DzlT3dcsA1ZnzFI+0Wa0XpsfldiQmAL1V4raWtpwbHkcnc3Xrd8mDQbi5zuCjAM+zDzrCIV+HYovpYYKrUUZs852a790wgfnPWfZEFzrfEWAIVVy9mF1TmaXS1yQJJl8Fkmodezkoqi5PtRuuf7+3cFZZk/FpDHhOOIDCbzIUpvaUwwGEwVN0/tGwOGTkWBd2cdjDmR/LoFJa/bRV/OQy5kJCYk8P4fgTVa6RyKzxVaabyKoOd59sCcCI4h86MZkTXWBas4YhEyhSpvJfMLXzgn8yYxpSCHcXw2T7a2zdmN4nAuVtiX2N82MgtuGtd+Ul+rlH7VIOooYDoqNyBLwbVoP2tHhVeChps9VNIJefnLlMpfxbD6y5V3iV2WGjdAPEwi5n4Kqa8TWLwzi/OHHhl1XCiHZkF6nZEZE4C1gN/psIDPtphzI5+6iiQvpneIyoCGttIFmLQ4pTRAaNLuI/A==</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
@@ -745,6 +755,28 @@ doDecrypt(passwd, onError);
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'UfGJNTU4X4mRC3FzOY9P8DvU-gzGzoHsz',
+        appKey: 'M5s030N49mYBiGTdrBzk3DRj',
+        placeholder: '畅所欲言，抑或不语',
+        avatar:'/images/avatar.png',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
