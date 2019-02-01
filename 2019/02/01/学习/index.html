@@ -89,7 +89,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习," />
 
 
 
@@ -100,17 +100,18 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-<meta name="description" content="title:学习BFS  日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[21">
+<meta name="description" content="日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[2100][2100]; int">
+<meta name="keywords" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枫语">
+<meta property="og:title" content="学习BFS">
 <meta property="og:url" content="http://yoursite.com/2019/02/01/学习/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="title:学习BFS  日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[21">
+<meta property="og:description" content="日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[2100][2100]; int">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-01T13:53:08.786Z">
+<meta property="og:updated_time" content="2019-02-01T13:59:45.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="枫语">
-<meta name="twitter:description" content="title:学习BFS  日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[21">
+<meta name="twitter:title" content="学习BFS">
+<meta name="twitter:description" content="日期：2019.5.4  迷宫2题解：  照题目上的框架敲好，就差不多了   #include&amp;lt;iostream&amp;gt; #include&amp;lt;queue&amp;gt;  using namespace std;  struct node{int x,y,step;}; node temp,b,e,t; queue&amp;lt;node&amp;gt; q;   bool a[2100][2100]; int">
 
 
 
@@ -146,7 +147,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <title> | 枫语</title>
+  <title>学习BFS | 枫语</title>
   
 
 
@@ -290,7 +291,7 @@ initial-scale=1, maximum-scale=1"/>
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">学习BFS</h1>
         
 
         <div class="post-meta">
@@ -350,10 +351,7 @@ initial-scale=1, maximum-scale=1"/>
       
 
       
-        <hr>
-<p>title:学习BFS</p>
-<hr>
-<pre><code>日期：2019.5.4
+        <pre><code>日期：2019.5.4
 </code></pre><blockquote>
 <p><a href="https://oj.creedowl.xyz/contest/19/problem/16" target="_blank" rel="noopener">迷宫2</a><br>题解：</p>
 <blockquote>
@@ -415,15 +413,35 @@ int main(){
 <blockquote>
 <p><a href="https://oj.creedowl.xyz/contest/19/problem/21" target="_blank" rel="noopener">数字转换</a><br>题解：</p>
 <blockquote>
-<p>按照上一题的框架，但会面临一些问题，例如判重<br>看这个题目，六位的数字，也就是最大654321，对于int来说还是挺轻松的，可以bool a[7000],作为判重的数组<br>但题目给出了提示：<a href="https://baike.baidu.com/item/%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/7968428?fr=aladdin" target="_blank" rel="noopener">康托展开</a><br>那在程序中的实现就是：<br>    int cantor(int a[]){<br>    int temp,num=0,i,j;<br>    for(i=1;i&lt;6;i++){<br>        temp=0;<br>        for(j=i+1;j&lt;=6;j++)    if(a[j]&lt;a[i]) temp++;<br>        num+=fac[6-i]*temp;<br>    }<br>    return num+1;<br>    }<br>即给出一个全排列，可以求出它是所有全排列中第几大的。这就厉害了，本身以空间换时间的BFS可以利用康托展开省下空间，最大的654321康托展开一下也就720，而且方便交换数据的操作（如果数列以数字的形式存在，则换数字的操作就会略显麻烦）<br>相关题目:<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/23" target="_blank" rel="noopener">八数码难题</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/19" target="_blank" rel="noopener">黑白棋游戏</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/20" target="_blank" rel="noopener">CoVH之再破难关</a></p>
+<p>按照上一题的框架，但会面临一些问题，例如判重<br>看这个题目，六位的数字，也就是最大654321，对于int来说还是挺轻松的，可以bool a[7000],作为判重的数组<br>但题目给出了提示：<a href="https://baike.baidu.com/item/%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/7968428?fr=aladdin" target="_blank" rel="noopener">康托展开</a><br>那在程序中的实现就是：</p>
 </blockquote>
+</blockquote>
+<pre><code>int cantor(int a[]){
+int temp,num=0,i,j;
+for(i=1;i&lt;6;i++){
+    temp=0;
+    for(j=i+1;j&lt;=6;j++)    if(a[j]&lt;a[i]) temp++;
+    num+=fac[6-i]*temp;
+}
+return num+1;
+}
+</code></pre><blockquote>
+<blockquote>
+<p>即给出一个全排列，可以求出它是所有全排列中第几大的。这就厉害了，本身以空间换时间的BFS可以利用康托展开省下空间，最大的654321康托展开一下也就720，而且方便交换数据的操作（如果数列以数字的形式存在，则换数字的操作就会略显麻烦）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>相关题目:<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/23" target="_blank" rel="noopener">八数码难题</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/19" target="_blank" rel="noopener">黑白棋游戏</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/20" target="_blank" rel="noopener">CoVH之再破难关</a></p>
 </blockquote>
 <hr>
 <blockquote>
 <p><a href="https://oj.creedowl.xyz/contest/19/problem/26" target="_blank" rel="noopener">FloodFill(细胞)</a><br>题解：</p>
 <blockquote>
-<p>这道题（这类题）在我看来就是读入地图，逐一枚举，查到细胞就开始广搜，清空细胞，累加数目,输出<br>将BFS封成函数，查到细胞就调用，清除细胞<br>相关题目：<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/25" target="_blank" rel="noopener">水坑</a><br>    <a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">岛屿的个数</a></p>
+<p>这道题（这类题）在我看来就是读入地图，逐一枚举，查到细胞就开始广搜，清空细胞，累加数目,输出<br>将BFS封成函数，查到细胞就调用，清除细胞</p>
 </blockquote>
+</blockquote>
+<blockquote>
+<p>相关题目：<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/25" target="_blank" rel="noopener">水坑</a><br>    <a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">岛屿的个数</a></p>
 </blockquote>
 
       
@@ -439,6 +457,12 @@ int main(){
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+        </div>
       
 
       
@@ -458,6 +482,10 @@ int main(){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/01/枫语-3/" rel="prev" title="枫语-3">
+                枫语-3 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -534,7 +562,7 @@ int main(){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -547,7 +575,7 @@ int main(){
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
