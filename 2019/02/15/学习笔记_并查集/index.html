@@ -89,7 +89,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习,数据结构," />
 
 
 
@@ -100,20 +100,21 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-<meta name="description" content="title: 学习笔记–并查集tags: 学习,数据结构 grammar_cjkRuby: true某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，==并查集=">
+<meta name="description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
+<meta name="keywords" content="学习,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枫语">
+<meta property="og:title" content="学习笔记--并查集">
 <meta property="og:url" content="http://yoursite.com/2019/02/15/学习笔记_并查集/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="title: 学习笔记–并查集tags: 学习,数据结构 grammar_cjkRuby: true某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，==并查集=">
+<meta property="og:description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/学习笔记_并查集/images/TIM截图20190214214236.png">
-<meta property="og:image" content="http://yoursite.com/2019/02/15/学习笔记_并查集/images/未命名文件.jpg">
-<meta property="og:updated_time" content="2019-02-15T03:13:25.454Z">
+<meta property="og:image" content="c:/Users/acer/Downloads/TIM截图20190214214236.png">
+<meta property="og:image" content="c:/Users/acer/Downloads/未命名文件.jpg">
+<meta property="og:updated_time" content="2019-02-15T12:37:58.383Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="枫语">
-<meta name="twitter:description" content="title: 学习笔记–并查集tags: 学习,数据结构 grammar_cjkRuby: true某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，==并查集=">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/15/学习笔记_并查集/images/TIM截图20190214214236.png">
+<meta name="twitter:title" content="学习笔记--并查集">
+<meta name="twitter:description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
+<meta name="twitter:image" content="c:/Users/acer/Downloads/TIM截图20190214214236.png">
 
 
 
@@ -149,7 +150,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <title> | 枫语</title>
+  <title>学习笔记--并查集 | 枫语</title>
   
 
 
@@ -293,7 +294,7 @@ initial-scale=1, maximum-scale=1"/>
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">学习笔记--并查集</h1>
         
 
         <div class="post-meta">
@@ -353,13 +354,12 @@ initial-scale=1, maximum-scale=1"/>
       
 
       
-        <hr>
-<p>title: 学习笔记–并查集<br>tags: 学习,数据结构</p>
-<h2 id="grammar-cjkRuby-true"><a href="#grammar-cjkRuby-true" class="headerlink" title="grammar_cjkRuby: true"></a>grammar_cjkRuby: true</h2><p>某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子<br>这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？<br>解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。<br>那……怎么判断祖先呢？这时候，==并查集==就派上了用场</p>
-<p>顾名思义，并查集有两个操作，一个是==并==，一个是==查==<br>以这道题为例：<img src="./images/TIM截图20190214214236.png" alt="enter description here"></p>
+        <p>某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子<br>这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？<br>解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。<br>那……怎么判断祖先呢？这时候，并查集就派上了用场</p>
+<p>顾名思义，并查集有两个操作，一个是并，一个是查<br>以这道题为例：<img src="C:\Users\acer\Downloads\TIM截图20190214214236.png" alt="TIM截图20190214214236"></p>
 <p>并就是把两个人变成同一个祖先，就像A的祖先是ROOT_A，B的祖先是ROOT_B。如果ROOT_A的祖先是ROOT_B，那么，A，B就成了亲戚。<br>那怎么知道某人的祖先是谁呢？<br>当然是存起来啊，但由于数据可能会很灵活，直接存祖先是不大可能的，但存上一代是可以实现的。既然知道上一代是谁，那么上一代的上一代的上一代的上一代……不也可以求出来吗？<br>所以，==并==就是将两个不同祖先的点的祖先合并，可以是A的祖先是B的祖先的祖先，也可以反过来；==查==就是依靠亲子关系，一层一层地向上找，直到找到真正地祖先</p>
-<p><img src="./images/未命名文件.jpg" alt="enter description here"><br>代码：</p>
-<p><strong>查</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x]==x) <span class="keyword">return</span> x;<span class="comment">//有时在判断条件会看到f[x]&lt;0,其实两者一样，和初始化有关</span></span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> find(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="C:\Users\acer\Downloads\未命名文件.jpg" alt="enter description here"><br>代码：</p>
+<p><strong>查</strong>：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x]==x) <span class="keyword">return</span> x;<span class="comment">//有时在判断条件会看到f[x]&lt;0,其实两者一样，和初始化有关</span></span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> find(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>并</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union1</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fx=find(x),y=find(y);</span><br><span class="line">	<span class="keyword">if</span>(fx!=fy) f[x]=f[y];<span class="comment">//如果两人祖先相同，那么就没有合并的必要</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>例题完整代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="keyword">char</span> ch;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">200010</span>];</span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> xx)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[xx]==xx) <span class="keyword">return</span> xx;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> f[xx]=find(f[xx]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union1</span><span class="params">(<span class="keyword">int</span> xx,<span class="keyword">int</span> yy)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> xf=find(xx),yf=find(yy);</span><br><span class="line">	<span class="keyword">if</span>(xf!=yf)f[xf]=yf;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;<span class="comment">//初始化令每个人的祖先都等于ta自己</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;ch&gt;&gt;x&gt;&gt;y;</span><br><span class="line">		<span class="keyword">if</span>(ch==<span class="string">'2'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(find(x)==find(y))<span class="built_in">cout</span>&lt;&lt;<span class="string">"Y"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"N"</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> union1(x,y);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>至于开头那个人是不是你亲戚，当然是啊，因为”你家来了个亲戚“</p>
@@ -377,6 +377,12 @@ initial-scale=1, maximum-scale=1"/>
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习-数据结构/" rel="tag"># 学习,数据结构</a>
+          
+        </div>
       
 
       
@@ -456,17 +462,8 @@ initial-scale=1, maximum-scale=1"/>
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -498,7 +495,7 @@ initial-scale=1, maximum-scale=1"/>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -531,22 +528,6 @@ initial-scale=1, maximum-scale=1"/>
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#grammar-cjkRuby-true"><span class="nav-number">1.</span> <span class="nav-text">grammar_cjkRuby: true</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
