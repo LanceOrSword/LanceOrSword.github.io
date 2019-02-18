@@ -89,7 +89,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <meta name="keywords" content="-学习 -数据结构," />
+  <meta name="keywords" content="学习,数据结构," />
 
 
 
@@ -101,7 +101,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 <meta name="description" content="[TOC] 路径压缩在学习并查集之后，刷上几题练练手也是不错的，but…… 如果并查集退化成一条或几条链，就像这样：  那按照先前的方法，我们查一个点A(假设A很大)，点A处于这个列表之中，那它的祖先是1，但查找的过程呢？ A → A-1 → A-2 →……→1 效率就是O(A)，一次查询还勉强，那多来几次呢？并查集的效果就…… 有问题就会有解决方法，尤其是这个问题好像不是那么难 我们分析一下：">
-<meta name="keywords" content="-学习 -数据结构">
+<meta name="keywords" content="学习,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记--并查集优化">
 <meta property="og:url" content="http://yoursite.com/2019/02/18/学习笔记_并查集优化/index.html">
@@ -109,7 +109,7 @@ initial-scale=1, maximum-scale=1"/>
 <meta property="og:description" content="[TOC] 路径压缩在学习并查集之后，刷上几题练练手也是不错的，but…… 如果并查集退化成一条或几条链，就像这样：  那按照先前的方法，我们查一个点A(假设A很大)，点A处于这个列表之中，那它的祖先是1，但查找的过程呢？ A → A-1 → A-2 →……→1 效率就是O(A)，一次查询还勉强，那多来几次呢？并查集的效果就…… 有问题就会有解决方法，尤其是这个问题好像不是那么难 我们分析一下：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/02/18/5c6abfe1eee08.jpg">
-<meta property="og:updated_time" content="2019-02-18T15:02:45.512Z">
+<meta property="og:updated_time" content="2019-02-18T15:06:30.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--并查集优化">
 <meta name="twitter:description" content="[TOC] 路径压缩在学习并查集之后，刷上几题练练手也是不错的，but…… 如果并查集退化成一条或几条链，就像这样：  那按照先前的方法，我们查一个点A(假设A很大)，点A处于这个列表之中，那它的祖先是1，但查找的过程呢？ A → A-1 → A-2 →……→1 效率就是O(A)，一次查询还勉强，那多来几次呢？并查集的效果就…… 有问题就会有解决方法，尤其是这个问题好像不是那么难 我们分析一下：">
@@ -374,7 +374,7 @@ initial-scale=1, maximum-scale=1"/>
 <h1 id="按秩合并"><a href="#按秩合并" class="headerlink" title="按秩合并"></a>按秩合并</h1><p>众所周知，<a href="https://baike.baidu.com/item/%E5%B9%B6%E6%9F%A5%E9%9B%86/9388442?fr=aladdin" target="_blank" rel="noopener">并查集</a>是一种特殊的<a href="https://baike.baidu.com/item/%E6%A0%91/2699484" target="_blank" rel="noopener">树</a>形结构（旁白：我不知道。<a href="www.baidu.com">百度</a>去）</p>
 <p>树有深度，并查集有秩（rank），我们可以记录下一棵树的深度，而且，浅树总比深树好</p>
 <p>那我们就实现一下如何让树”变浅“</p>
-<p>（好吧，编不下去了）</p>
+<p><del>好吧，编不下去了</del></p>
 <p>在合并时比对两个树的深浅，将较浅的那一棵的根指向较深的那一棵的根，这样并查集的秩就比较小</p>
 <p>这就是<strong>按秩合并</strong></p>
 
@@ -394,7 +394,9 @@ initial-scale=1, maximum-scale=1"/>
       
         <div class="post-tags">
           
-            <a href="/tags/学习-数据结构/" rel="tag"># -学习 -数据结构</a>
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       

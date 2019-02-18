@@ -89,7 +89,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 
-  <meta name="keywords" content="-学习 -数据结构," />
+  <meta name="keywords" content="学习,数据结构," />
 
 
 
@@ -101,7 +101,7 @@ initial-scale=1, maximum-scale=1"/>
 
 
 <meta name="description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
-<meta name="keywords" content="-学习 -数据结构">
+<meta name="keywords" content="学习,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记--并查集">
 <meta property="og:url" content="http://yoursite.com/2019/02/15/学习笔记_并查集/index.html">
@@ -110,7 +110,7 @@ initial-scale=1, maximum-scale=1"/>
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/02/18/5c6a90893f876.png">
 <meta property="og:image" content="https://i.loli.net/2019/02/18/5c6a90d3c5528.jpg">
-<meta property="og:updated_time" content="2019-02-18T14:52:29.991Z">
+<meta property="og:updated_time" content="2019-02-18T15:04:33.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记--并查集">
 <meta name="twitter:description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
@@ -356,7 +356,7 @@ initial-scale=1, maximum-scale=1"/>
       
         <p>某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子<br>这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？<br>解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。<br>那……怎么判断祖先呢？这时候，并查集就派上了用场</p>
 <p>顾名思义，并查集有两个操作，一个是并，一个是查<br>以这道题为例：<a href="https://i.loli.net/2019/02/18/5c6a90893f876.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/18/5c6a90893f876.png" alt="TIM截图20190214214236.png"></a></p>
-<p>并就是把两个人变成同一个祖先，就像A的祖先是ROOT_A，B的祖先是ROOT_B。如果ROOT_A的祖先是ROOT_B，那么，A，B就成了亲戚。<br>那怎么知道某人的祖先是谁呢？<br>当然是存起来啊，但由于数据可能会很灵活，直接存祖先是不大可能的，但存上一代是可以实现的。既然知道上一代是谁，那么上一代的上一代的上一代的上一代……不也可以求出来吗？<br>所以，==并==就是将两个不同祖先的点的祖先合并，可以是A的祖先是B的祖先的祖先，也可以反过来；==查==就是依靠亲子关系，一层一层地向上找，直到找到真正地祖先</p>
+<p>并就是把两个人变成同一个祖先，就像A的祖先是ROOT_A，B的祖先是ROOT_B。如果ROOT_A的祖先是ROOT_B，那么，A，B就成了亲戚。<br>那怎么知道某人的祖先是谁呢？<br>当然是存起来啊，但由于数据可能会很灵活，直接存祖先是不大可能的，但存上一代是可以实现的。既然知道上一代是谁，那么上一代的上一代的上一代的上一代……不也可以求出来吗？<br>所以，<strong>并</strong> 就是将两个不同祖先的点的祖先合并，可以是A的祖先是B的祖先的祖先，也可以反过来；<strong>查</strong> 就是依靠亲子关系，一层一层地向上找，直到找到真正地祖先</p>
 <p><img src="https://i.loli.net/2019/02/18/5c6a90d3c5528.jpg" alt="未命名文件.jpg"></p>
 <p>代码：</p>
 <p><strong>查</strong>：</p>
@@ -382,7 +382,9 @@ initial-scale=1, maximum-scale=1"/>
       
         <div class="post-tags">
           
-            <a href="/tags/学习-数据结构/" rel="tag"># -学习 -数据结构</a>
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
           
         </div>
       
