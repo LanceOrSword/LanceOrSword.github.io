@@ -35,6 +35,13 @@ initial-scale=1, maximum-scale=1">
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -222,22 +229,22 @@ initial-scale=1, maximum-scale=1">
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
           </a>
         </li>
       
@@ -378,7 +385,7 @@ function doDecrypt (pwd, onError) {
 	}
 }
 </script>
-<div id="enc_content" style="display:none">U2FsdGVkX1/GjjmekBDWlP2juAOIsH/44pL5FRjWj8YiQCZnlyDDZ7ITzI+l0Va5thulZ1OQxh1J+MyFH85i0n3x4hrGIgXr7HxpvRlPtfPC0yx2Z8PcNkOkSaSKm87iI6R7yqsddtz3wXrLlWg+rqMor3jfT2PzJuKkzq55EhWl4zIDyInhMAC2ToHr1238VHeKI6ysOBvQ42OKaJzeqTIgNWX1JM1bPjN8e8gj7uCPPmCIOJ0SjjPxLCBVfBB2Xr69EpxEtPTDsV5Ei7811IEvV3cl01AqRdm6x3Yx52fFjtrNGO1qenpDY+fazK72DXqV1mnEZZ/HKrbm3mq4YcGAemxWXhPRXsGnMnk0Bi2+dbOTXZ/f5R7YiRsK7tGnVi4l7nqKHn3D9z9R2vuQ5wr74IgeNX5jyqyYckmUeAtKWueh9dkSwLWsYQEH/CcRiszkH2RsnCf/9KUXvADOQGcPRiynkOsMQSLsjXe9Qa8VTy924lzSfHaIVcg7A1wZdcDQWJpK2pnin4x7Wd7lcQ==</div>
+<div id="enc_content" style="display:none">U2FsdGVkX19URlZkRVk4HVp79NCsMrtXDURwfBh5jW89RipCnWEyjNedE5rp+f/mD6J34rwqLWn178qBAbHxj8SMt8R2MbBdlSJNdFicADexutDQ2V7xkE1LeClWRP+75d5fP0FkJ5jO98zm4ILQQmd2k42NOlHWe/Q+lBXd9SJLMN+nnyLnHxaid4P6GXR7ofmlEFagFxhLOzvpx1qajSnQCDhen1qv7KkQwoyAGa0FLq8bCPrz2tYGtdVVVHHBMU1YlTIKHXIz7AEj3yC+cKemrboVCH+hEVW+vvnWjbaz4AtpgfKpbNGYDmRPIbwMC4xdkMa9OXgZEp/rl5Jjcf3T9i1r4BSfPHDjMjnk39ZMiCZg8esA6xZ8D6czbBEN3RZmohPEXXATwj13qgEiR5nCbaDJiP/I0knReX6ij1XBEGWYadUwqnaspuEdKhUcEzFaJiXu7Rgtq6J8dsGC1kiEtKuDrBRf9JflTKm5gxL7iRi8gFTRwx873xIUJq+ZLaATpc3crp401Q/YAFQTnQ==</div>
 <div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
 <script>
 var onError = function(error) {
