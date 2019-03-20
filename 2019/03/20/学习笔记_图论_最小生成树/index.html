@@ -96,7 +96,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <meta name="keywords" content="学习,数据结构,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -107,21 +107,21 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
-<meta name="keywords" content="学习,数据结构">
+<meta name="description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记--并查集">
-<meta property="og:url" content="https://www.wnti.top/2019/02/15/学习笔记_并查集/index.html">
+<meta property="og:title" content="枫语">
+<meta property="og:url" content="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
+<meta property="og:description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/02/18/5c6a90893f876.png">
-<meta property="og:image" content="https://i.loli.net/2019/02/18/5c6a90d3c5528.jpg">
-<meta property="og:updated_time" content="2019-02-18T15:04:33.784Z">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d41fa5ff8.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c92477510ffd.png">
+<meta property="og:updated_time" content="2019-03-20T14:53:00.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记--并查集">
-<meta name="twitter:description" content="某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。那……怎么判断祖先呢？这时候，并查集就派上了用场 顾名思义，并查集有两个操作，一个是并，一个是查以这道题为例： 并就是把两个人变成同一个祖先，就">
-<meta name="twitter:image" content="https://i.loli.net/2019/02/18/5c6a90893f876.png">
+<meta name="twitter:title" content="枫语">
+<meta name="twitter:description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
 
 
 
@@ -151,13 +151,13 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <link rel="canonical" href="https://www.wnti.top/2019/02/15/学习笔记_并查集/">
+  <link rel="canonical" href="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/">
 
 
 
 
 
-  <title>学习笔记--并查集 | 枫语</title>
+  <title> | 枫语</title>
   
 
 
@@ -284,7 +284,7 @@ initial-scale=1, maximum-scale=1">
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/02/15/学习笔记_并查集/">
+    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="枫言">
@@ -301,7 +301,7 @@ initial-scale=1, maximum-scale=1">
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习笔记--并查集</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -313,8 +313,8 @@ initial-scale=1, maximum-scale=1">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-15T11:13:24+08:00">
-                2019-02-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T13:24:00+08:00">
+                2019-03-20
               </time>
             
 
@@ -332,8 +332,8 @@ initial-scale=1, maximum-scale=1">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/15/学习笔记_并查集/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/学习笔记_并查集/" itemprop="commentCount"></span>
+                <a href="/2019/03/20/学习笔记_图论_最小生成树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/20/学习笔记_图论_最小生成树/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -361,17 +361,52 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <p>某天，你家里来了个亲戚，你妈笑着对你说：这是你爸爸的爷爷的女婿的婶婶的阿姨的舅舅的外孙女的丈夫的哥哥的儿子<br>这时，你陷入了沉思……要叫他什么？等等，这是亲戚吗？<br>解决这个问题，可以转化为解决你和他是不是有同一个祖先的问题，如果你们祖先相同，那你们一定就是亲戚。<br>那……怎么判断祖先呢？这时候，并查集就派上了用场</p>
-<p>顾名思义，并查集有两个操作，一个是并，一个是查<br>以这道题为例：<a href="https://i.loli.net/2019/02/18/5c6a90893f876.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/18/5c6a90893f876.png" alt="TIM截图20190214214236.png"></a></p>
-<p>并就是把两个人变成同一个祖先，就像A的祖先是ROOT_A，B的祖先是ROOT_B。如果ROOT_A的祖先是ROOT_B，那么，A，B就成了亲戚。<br>那怎么知道某人的祖先是谁呢？<br>当然是存起来啊，但由于数据可能会很灵活，直接存祖先是不大可能的，但存上一代是可以实现的。既然知道上一代是谁，那么上一代的上一代的上一代的上一代……不也可以求出来吗？<br>所以，<strong>并</strong> 就是将两个不同祖先的点的祖先合并，可以是A的祖先是B的祖先的祖先，也可以反过来；<strong>查</strong> 就是依靠亲子关系，一层一层地向上找，直到找到真正地祖先</p>
-<p><img src="https://i.loli.net/2019/02/18/5c6a90d3c5528.jpg" alt="未命名文件.jpg"></p>
-<p>代码：</p>
-<p><strong>查</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[x]==x) <span class="keyword">return</span> x;<span class="comment">//有时在判断条件会看到f[x]&lt;0,其实两者一样，和初始化有关</span></span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> find(f[x]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>并</strong>：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union1</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> fx=find(x),y=find(y);</span><br><span class="line">	<span class="keyword">if</span>(fx!=fy) f[x]=f[y];<span class="comment">//如果两人祖先相同，那么就没有合并的必要</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例题完整代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line"><span class="keyword">char</span> ch;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">200010</span>];</span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> xx)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(f[xx]==xx) <span class="keyword">return</span> xx;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> f[xx]=find(f[xx]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union1</span><span class="params">(<span class="keyword">int</span> xx,<span class="keyword">int</span> yy)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> xf=find(xx),yf=find(yy);</span><br><span class="line">	<span class="keyword">if</span>(xf!=yf)f[xf]=yf;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) f[i]=i;<span class="comment">//初始化令每个人的祖先都等于ta自己</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;ch&gt;&gt;x&gt;&gt;y;</span><br><span class="line">		<span class="keyword">if</span>(ch==<span class="string">'2'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(find(x)==find(y))<span class="built_in">cout</span>&lt;&lt;<span class="string">"Y"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="built_in">cout</span>&lt;&lt;<span class="string">"N"</span>&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> union1(x,y);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>至于开头那个人是不是你亲戚，当然是啊，因为”你家来了个亲戚“</p>
+        <hr>
+<p>title: 学习笔记——图论——最小生成树</p>
+<p>tags: </p>
+<pre><code>- 学习
+
+- 图论
+</code></pre><hr>
+<p>首先，了解一下什么叫最小生成树</p>
+<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>生成树就可以当作子图</p>
+<p>那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小</p>
+<p>这样的树可以解决什么问题呢？</p>
+<p>例题：</p>
+<p><img src="https://i.loli.net/2019/03/20/5c91d2162d487.png" alt="Prim例题.png"></p>
+<p>怎样解决这个问题呢？</p>
+<h1 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h1><h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止</p>
+<p>以例题来讲</p>
+<p><img src="https://i.loli.net/2019/03/20/5c91d41fa5ff8.png" alt="Prim例题-图.png"></p>
+<p>从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把 2 入队</p>
+<p>现在考虑 1 和 2，在它们所能到达的点里，3 最近，就把 3 入队</p>
+<p>已经有3个点入队了，不可能再入队其他点了，结束</p>
+<p>现在我们看一下这棵生成树是不是最小的，显而易见，没有比它更小的方案了</p>
+<p>是不是感觉隐隐约约有点贪心的味道，每步都取最优，其实本质也可以说是贪心</p>
+<p>那我们再谈一谈实现：</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>我们要存图，为了方便<del>偷懒</del>，我就用矩阵存图</p>
+<p>那我们还需要什么呢？</p>
+<p>一个一维数组用来存到未入队点的距离，需要注意的是，我们在初始化这个数组的时候，除了出发点本身和出发点可以直接到达的点，其它都是无法到达的，最后的结果我们要最小，那初始化就初始化为最大</p>
+<p>一个布尔数组用来检查点有没有入队</p>
+<p>数据准备好了</p>
+<p>算法实现以  外层for循环  *（遍历所有点找最小加+对一维数组进行更新）</p>
+<p>核心代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		mininum=max_int;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)	<span class="keyword">if</span>(!v[j] &amp;&amp; mininum &gt; lc[j]) mininum=lc[j],pos=j;<span class="comment">//寻找最小的未用点</span></span><br><span class="line">		min_tree +=mininum,v[pos]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) <span class="keyword">if</span>(!v[j] &amp;&amp; lc[j]&gt;a[pos][j]) lc[j]= a[pos][j];<span class="comment">//更新数组</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h1><h2 id="思想-1"><a href="#思想-1" class="headerlink" title="思想"></a>思想</h2><p>Prim 以点为单位，Kruskal 则以边为单位，每次查找最短的边。</p>
+<p>需要注意的是，如果你单纯处理最短边很可能会出现环。</p>
+<p>所以，我们要对付一下环这种东西。</p>
+<p>怎么办，我们先找一找如果环有什么特征，如果引入其他数据结构可不可以从这个特征入手，解决出现环的问题？</p>
+<p>并查集就有用了</p>
+<p>每次我们联通两个点就对这两个点的祖先进行查找，如果相同的话放弃，不同就联通</p>
+<p>还是以样例为准来说</p>
+<p><img src="https://i.loli.net/2019/03/20/5c92477510ffd.png" alt="Kruskal例题.png"></p>
+<p>第一条，两个点没关系，最小生成树的值+=权值，两个点合并，</p>
+<p>第二条，也安然无恙</p>
+<p>第三条，发现两个点有共同的祖先，continue</p>
+<p>没了</p>
+<p>如果还有就继续</p>
+<h2 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h2><p>边我选择结构体存，然后一波经典并查集</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= m,i++)&#123;</span><br><span class="line">	<span class="keyword">if</span> (find(e[i].x) != find(e[i].y))	min_tree += e[i].points++;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">continue</span></span><br><span class="line">	<span class="keyword">if</span> (points = n<span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -387,14 +422,6 @@ initial-scale=1, maximum-scale=1">
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/学习/" rel="tag"># 学习</a>
-          
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
-          
-        </div>
-      
 
       
       
@@ -404,7 +431,7 @@ initial-scale=1, maximum-scale=1">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/07/初探Arch/" rel="next" title>
+              <a href="/2019/02/20/学习笔记_图论_图的储存/" rel="next" title>
                 <i class="fa fa-chevron-left"></i> 
               </a>
             
@@ -413,10 +440,6 @@ initial-scale=1, maximum-scale=1">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/15/传送门/" rel="prev" title="传送门">
-                传送门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,8 +496,17 @@ initial-scale=1, maximum-scale=1">
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -537,6 +569,22 @@ initial-scale=1, maximum-scale=1">
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Prim"><span class="nav-number">2.</span> <span class="nav-text">Prim</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-number">2.1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.2.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kruskal"><span class="nav-number">3.</span> <span class="nav-text">Kruskal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想-1"><span class="nav-number">3.1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现-1"><span class="nav-number">3.2.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
