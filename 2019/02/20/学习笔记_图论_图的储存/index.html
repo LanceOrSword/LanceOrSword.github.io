@@ -96,7 +96,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习,图论,">
 
 
 
@@ -107,20 +107,21 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="title: 学习笔记——图论—图的储存 tags:  - 学习 ​    - 图论  在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权">
+<meta name="description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
+<meta name="keywords" content="学习,图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枫语">
+<meta property="og:title" content="学习笔记——图论——图的储存">
 <meta property="og:url" content="https://www.wnti.top/2019/02/20/学习笔记_图论_图的储存/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="title: 学习笔记——图论—图的储存 tags:  - 学习 ​    - 图论  在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权">
+<meta property="og:description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/03/12/5c87c0948b305.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/13/5c889ad48f912.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/13/5c889bbcb1d94.png">
-<meta property="og:updated_time" content="2019-03-21T10:38:25.159Z">
+<meta property="og:updated_time" content="2019-03-27T14:34:10.677Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="枫语">
-<meta name="twitter:description" content="title: 学习笔记——图论—图的储存 tags:  - 学习 ​    - 图论  在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权">
+<meta name="twitter:title" content="学习笔记——图论——图的储存">
+<meta name="twitter:description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/12/5c87c0948b305.png">
 
 
@@ -157,7 +158,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <title> | 枫语</title>
+  <title>学习笔记——图论——图的储存 | 枫语</title>
   
 
 
@@ -301,7 +302,7 @@ initial-scale=1, maximum-scale=1">
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">学习笔记——图论——图的储存</h1>
         
 
         <div class="post-meta">
@@ -361,13 +362,7 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <hr>
-<p>title: 学习笔记——图论—图的储存</p>
-<p>tags: </p>
-<pre><code>- 学习
-</code></pre><p>​    - 图论</p>
-<hr>
-<p>在学过图论的基础名词之后，我们尝试把图存进电脑当中</p>
+        <p>在学过图论的基础名词之后，我们尝试把图存进电脑当中</p>
 <p>有两三种储存方法：</p>
 <p>矩阵储存和链式前向星</p>
 <h1 id="矩阵储存"><a href="#矩阵储存" class="headerlink" title="矩阵储存"></a>矩阵储存</h1><p>一条边有三个值：起点、终点、权值（一般默认为有权）</p>
@@ -420,6 +415,14 @@ initial-scale=1, maximum-scale=1">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
+          
+        </div>
+      
 
       
       
@@ -439,8 +442,8 @@ initial-scale=1, maximum-scale=1">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/20/学习笔记_图论_最小生成树/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/20/学习笔记_图论_最小生成树/" rel="prev" title="学习笔记——图论——最小生成树">
+                学习笔记——图论——最小生成树 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

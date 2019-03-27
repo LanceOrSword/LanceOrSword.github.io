@@ -96,7 +96,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="学习,图论,">
 
 
 
@@ -107,20 +107,21 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
+<meta name="description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
+<meta name="keywords" content="学习,图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="枫语">
+<meta property="og:title" content="学习笔记——图论——最小生成树">
 <meta property="og:url" content="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
+<meta property="og:description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d41fa5ff8.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/20/5c92477510ffd.png">
-<meta property="og:updated_time" content="2019-03-21T10:37:25.999Z">
+<meta property="og:updated_time" content="2019-03-27T14:33:33.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="枫语">
-<meta name="twitter:description" content="title: 学习笔记——图论——最小生成树 tags:  - 学习  - 图论  首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所">
+<meta name="twitter:title" content="学习笔记——图论——最小生成树">
+<meta name="twitter:description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
 
 
@@ -157,7 +158,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <title> | 枫语</title>
+  <title>学习笔记——图论——最小生成树 | 枫语</title>
   
 
 
@@ -301,7 +302,7 @@ initial-scale=1, maximum-scale=1">
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">学习笔记——图论——最小生成树</h1>
         
 
         <div class="post-meta">
@@ -361,14 +362,7 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <hr>
-<p>title: 学习笔记——图论——最小生成树</p>
-<p>tags: </p>
-<pre><code>- 学习
-
-- 图论
-</code></pre><hr>
-<p>首先，了解一下什么叫最小生成树</p>
+        <p>首先，了解一下什么叫最小生成树</p>
 <h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>生成树就可以当作子图</p>
 <p>那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小</p>
 <p>这样的树可以解决什么问题呢？</p>
@@ -422,6 +416,14 @@ initial-scale=1, maximum-scale=1">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
+          
+        </div>
+      
 
       
       
@@ -431,8 +433,8 @@ initial-scale=1, maximum-scale=1">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/20/学习笔记_图论_图的储存/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2019/02/20/学习笔记_图论_图的储存/" rel="next" title="学习笔记——图论——图的储存">
+                <i class="fa fa-chevron-left"></i> 学习笔记——图论——图的储存
               </a>
             
           </div>
