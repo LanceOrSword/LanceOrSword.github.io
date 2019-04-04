@@ -107,18 +107,18 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="最短路假如你想以最短的路程从A市到B市（A市可能不与B市直通），而且你有一张神奇的地图，标着所有城市之间路线（包括所有合法&amp;amp;不合法的方式）信息量挺大的，你又不想算，那就找个算法解决这个问题吧。  Dijkstra Dijkstra 中文：狄杰斯特拉 发明者：Dijkstra(荷兰) 应用：求解单源最短路（正权图） 效率：n^2  思路类似于Prim，用已知信息一直向外寻找，略有不同的就是对">
+<meta name="description" content="如何在图中找到两个点之间的最短路？ Dijkstra Bellman-Ford SPFA Floyd">
 <meta name="keywords" content="学习,图论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记——图论——最短路">
 <meta property="og:url" content="https://www.wnti.top/2019/03/27/学习笔_图论_最短路/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="最短路假如你想以最短的路程从A市到B市（A市可能不与B市直通），而且你有一张神奇的地图，标着所有城市之间路线（包括所有合法&amp;amp;不合法的方式）信息量挺大的，你又不想算，那就找个算法解决这个问题吧。  Dijkstra Dijkstra 中文：狄杰斯特拉 发明者：Dijkstra(荷兰) 应用：求解单源最短路（正权图） 效率：n^2  思路类似于Prim，用已知信息一直向外寻找，略有不同的就是对">
+<meta property="og:description" content="如何在图中找到两个点之间的最短路？ Dijkstra Bellman-Ford SPFA Floyd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-31T08:33:20.627Z">
+<meta property="og:updated_time" content="2019-04-04T12:23:26.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记——图论——最短路">
-<meta name="twitter:description" content="最短路假如你想以最短的路程从A市到B市（A市可能不与B市直通），而且你有一张神奇的地图，标着所有城市之间路线（包括所有合法&amp;amp;不合法的方式）信息量挺大的，你又不想算，那就找个算法解决这个问题吧。  Dijkstra Dijkstra 中文：狄杰斯特拉 发明者：Dijkstra(荷兰) 应用：求解单源最短路（正权图） 效率：n^2  思路类似于Prim，用已知信息一直向外寻找，略有不同的就是对">
+<meta name="twitter:description" content="如何在图中找到两个点之间的最短路？ Dijkstra Bellman-Ford SPFA Floyd">
 
 
 
@@ -358,7 +358,10 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <h1 id="最短路"><a href="#最短路" class="headerlink" title="最短路"></a>最短路</h1><p>假如你想以最短的路程从A市到B市（A市可能不与B市直通），而且你有一张神奇的地图，标着所有城市之间路线（包括所有合法&amp;不合法的方式）信息量挺大的，你又不想算，那就找个算法解决这个问题吧。</p>
+        <p>如何在图中找到两个点之间的最短路？</p>
+<p>Dijkstra Bellman-Ford SPFA Floyd</p>
+ <a id="more"></a> 
+<h1 id="最短路"><a href="#最短路" class="headerlink" title="最短路"></a>最短路</h1><p>假如你想以最短的路程从A市到B市（A市可能不与B市直通），而且你有一张神奇的地图，标着所有城市之间路线（包括所有合法&amp;不合法的方式）信息量挺大的，你又不想算，那就找个算法解决这个问题吧。</p>
 <hr>
 <h1 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h1><blockquote>
 <p><a href="https://baike.baidu.com/item/%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95/4049057?fr=aladdin" target="_blank" rel="noopener">Dijkstra</a></p>
