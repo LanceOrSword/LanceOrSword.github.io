@@ -96,7 +96,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <meta name="keywords" content="学习,">
+  <meta name="keywords" content="个人,">
 
 
 
@@ -107,18 +107,18 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
-<meta name="keywords" content="学习">
+<meta name="description" content="好久没有写博客了，这个我内心的小角落总是我最好的港湾">
+<meta name="keywords" content="个人">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习BFS">
-<meta property="og:url" content="https://www.wnti.top/2019/02/01/学习/index.html">
+<meta property="og:title" content="2019年中盘点">
+<meta property="og:url" content="https://www.wnti.top/2019/07/04/2019年中盘点/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
+<meta property="og:description" content="好久没有写博客了，这个我内心的小角落总是我最好的港湾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-16T11:29:41.943Z">
+<meta property="og:updated_time" content="2019-07-04T07:58:12.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习BFS">
-<meta name="twitter:description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
+<meta name="twitter:title" content="2019年中盘点">
+<meta name="twitter:description" content="好久没有写博客了，这个我内心的小角落总是我最好的港湾">
 
 
 
@@ -148,13 +148,13 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <link rel="canonical" href="https://www.wnti.top/2019/02/01/学习/">
+  <link rel="canonical" href="https://www.wnti.top/2019/07/04/2019年中盘点/">
 
 
 
 
 
-  <title>学习BFS | 枫语</title>
+  <title>2019年中盘点 | 枫语</title>
   
 
 
@@ -281,7 +281,7 @@ initial-scale=1, maximum-scale=1">
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/02/01/学习/">
+    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/07/04/2019年中盘点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="枫言">
@@ -298,7 +298,7 @@ initial-scale=1, maximum-scale=1">
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习BFS</h1>
+          <h1 class="post-title" itemprop="name headline">2019年中盘点</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@ initial-scale=1, maximum-scale=1">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-01T21:15:28+08:00">
-                2019-02-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-04T09:19:05+08:00">
+                2019-07-04
               </time>
             
 
@@ -329,8 +329,8 @@ initial-scale=1, maximum-scale=1">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/01/学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/01/学习/" itemprop="commentCount"></span>
+                <a href="/2019/07/04/2019年中盘点/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/04/2019年中盘点/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -358,41 +358,19 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <pre><code>日期：2019.1.4
-</code></pre><blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/16" target="_blank" rel="noopener">迷宫2</a><br>题解：</p>
-<blockquote>
-<p>照题目上的框架敲好，就差不多了</p>
-</blockquote>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span><span class="keyword">int</span> x,y,step;&#125;;</span><br><span class="line">node temp,b,e,t;</span><br><span class="line"><span class="built_in">queue</span>&lt;node&gt; q; </span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> a[<span class="number">2100</span>][<span class="number">2100</span>];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">	    &#123;</span><br><span class="line">		    	<span class="built_in">cin</span>&gt;&gt;a[i][j];</span><br><span class="line">	    		a[i][j]=!a[i][j];</span><br><span class="line">	    &#125;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;b.x&gt;&gt;b.y;</span><br><span class="line">    b.step=<span class="number">0</span>;</span><br><span class="line">    q.push(b);</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;e.x&gt;&gt;e.y;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">    	t=q.front();</span><br><span class="line">    	q.pop();</span><br><span class="line">     	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">    	&#123;</span><br><span class="line">        	temp.x=t.x+dx[i];</span><br><span class="line">        	temp.y=t.y+dy[i];</span><br><span class="line">        	temp.step=t.step+<span class="number">1</span>;</span><br><span class="line">        	</span><br><span class="line">        	<span class="keyword">if</span>(a[temp.x][temp.y] == <span class="number">1</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">               	a[temp.x][temp.y] = <span class="number">0</span>;</span><br><span class="line">            	<span class="keyword">if</span>((temp.x == e.x) &amp;&amp; (temp.y == e.y))</span><br><span class="line">    			&#123;</span><br><span class="line">                	<span class="built_in">cout</span>&lt;&lt;temp.step;</span><br><span class="line">    				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	        &#125;                  </span><br><span class="line">        	    <span class="keyword">else</span>	q.push(temp);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"No Answer!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/21" target="_blank" rel="noopener">数字转换</a><br>题解：</p>
-<blockquote>
-<p>按照上一题的框架，但会面临一些问题，例如判重<br>看这个题目，六位的数字，也就是最大654321，对于int来说还是挺轻松的，可以bool a[7000],作为判重的数组<br>但题目给出了提示：<a href="https://baike.baidu.com/item/%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/7968428?fr=aladdin" target="_blank" rel="noopener">康托展开</a><br>那在程序中的实现就是：</p>
-</blockquote>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cantor</span><span class="params">(<span class="keyword">int</span> a[])</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp,num=<span class="number">0</span>,i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;<span class="number">6</span>;i++)&#123;</span><br><span class="line">	temp=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;=<span class="number">6</span>;j++)	<span class="keyword">if</span>(a[j]&lt;a[i]) temp++;</span><br><span class="line">	num+=fac[<span class="number">6</span>-i]*temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> num+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<p>即给出一个全排列，可以求出它是所有全排列中第几大的。这就厉害了，本身以空间换时间的BFS可以利用康托展开省下空间，最大的654321康托展开一下也就720，而且方便交换数据的操作（如果数列以数字的形式存在，则换数字的操作就会略显麻烦）</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>相关题目:<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/23" target="_blank" rel="noopener">八数码难题</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/19" target="_blank" rel="noopener">黑白棋游戏</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/20" target="_blank" rel="noopener">CoVH之再破难关</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/26" target="_blank" rel="noopener">FloodFill(细胞)</a><br>题解：</p>
-<blockquote>
-<p>这道题（这类题）在我看来就是读入地图，逐一枚举，查到细胞就开始广搜，清空细胞，累加数目,输出<br>将BFS封成函数，查到细胞就调用，清除细胞</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>相关题目：<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/25" target="_blank" rel="noopener">水坑</a><br>    <a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">岛屿的个数</a></p>
-</blockquote>
-<p>​        </p>
+        <p>好久没有写博客了，这个我内心的小角落总是我最好的港湾</p>
+ <a id="more"></a> 
+<p>这个半年过得有点仓促，生物地理终于考完了，也和班主任告别了，他真的教会了我很多很多</p>
+<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><h4 id="大考"><a href="#大考" class="headerlink" title="大考"></a>大考</h4><p>一个学期过去了，两次大考，期中考出乎意料地发挥，段四，但或许是能量守恒，这次期末考数学、语文都是我的历史最低，科技楼无望……但可能会回到20班，第一次大考从20班开始，这次说不定意味着重新开始。心态其实变化挺大，期中考前的自傲与一小点恐惧（最好是一小点）到考完极度嚣张，两次异常状态感觉不错，期末考前还很嚣张，但考前毫无紧张的感觉，所以就翻车了……</p>
+<h4 id="生物-amp-地理"><a href="#生物-amp-地理" class="headerlink" title="生物&amp;地理"></a>生物&amp;地理</h4><p>终于考完了，也意味着初三了，八本课本在这一个学期中占了将近1/4的空间，虽然看都没看，放在那勉强算激励自己努力了……雨天去南门考，组队走过去的，一路上各种堵，人行道全是人，不得已，只有公路了，旁边是别人包下来的公交，对比伤害 <em> 1。走到门口，路堵住了，和大部队只有一杆之隔，但就是过不去，最后直接走到校门口再往回走，成功集合。南门是真的挺气派，至少说比擢英大，空中操场真的是对比伤害 </em> 110，考场和候考室感觉远得我都懵了。不过对于他们男女厕分别再走廊两段我有点难以接受，我考场在女厕旁（隔一个楼梯口），这种安排真的令我有点绝望，不过据说厕所卫生不大好，幸亏没去，我真的有点无法理解他们回来怎么会聊起这个，虽说是将近于公用厕所，但还是分男女的，难道真的对异性的厕所感兴趣？考场还不错，窗外好像是个工地，有点无趣，不如擢英，可以数树叶，这个得差评。考场每个人桌上放块石头，第一眼以为是橡皮擦，其实是拿来压准考证的。说到准考证，那真的是一张不正经的证件照，乍一看还以为在翻白眼，但事实是和别人在讲话，眼神飘了而已，真的不是嚣张（还被班主任拿来给别人看……）。地理考得莫名其妙，日常答案一大空，这次拆两空，中间加个诡异的符号，一脸懵。监考员还好，考生物之前跟我们讲有一个人写错准考证了，瞬间惊悚，应该不是我……吧。同考场的还有纪委，其他都不认识。考完收东西，倒备考室的垃圾，直接六楼一个管道下去，又对比伤害 * max了。中途母亲送钥匙、水，从六楼下去，喝了口水又上去了，走这一趟我为了啥……回校直接逃晚自习，去理了个发，回家答案出来，估计总分39吧</p>
+<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>emmm……虽然说拿到5的时候打算不玩的，但最终……还不错，终于通了元气（普通），我都要给自己鼓掌了，当然，5的电量75%都是元气……说玩了挺久，其实也就从5月开始玩。元气从最初的客厅、一层地窖到现在客厅、花园、实验室、三层地窖，变化真的挺大</p>
+<h3 id="活动"><a href="#活动" class="headerlink" title="活动"></a>活动</h3><p>趣味运动会上摸石过河真的是让我有点感动，教室里无休无止的魔方比拼还不错</p>
+<h3 id="人际"><a href="#人际" class="headerlink" title="人际"></a>人际</h3><p>和那群垃圾的关系彻底恶化，真的少了好多事，多了挺多低素质的谩骂。这方面还有点复杂，虽然说没人看，但我还是打算写一篇加密文来说</p>
+<h3 id="体育"><a href="#体育" class="headerlink" title="体育"></a>体育</h3><p>开始学打球了，挺有意思的，从最开始在场上瞎跑到现在在场上瞎跑，勉强算有进步，暑假可以好好练投篮。每天下了晚自习去打球，打完回家从冰箱拿杯酸奶，生活滋润</p>
+<h3 id="信息学-amp-微笙"><a href="#信息学-amp-微笙" class="headerlink" title="信息学&amp;微笙"></a>信息学&amp;微笙</h3><p>好久没做题了，微笙好像也没什么动静，我们都快成为初三的老人了，活动没几次，教学也没几次，感觉有点渺茫……不过总会有人接班的。作品得了三等奖，还不错</p>
+<h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>开始以英文为主了，avicii的遗专循环了好几天，许嵩、李荣浩没出新歌，MP4借给别人，还看全职看上瘾了</p>
+<h3 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h3><p>如果没记错的话，爱死机、分裂、玻璃先生是自己找资源看的，纪录片推我们的星球、苏东坡，去电影院看了复联四，感觉奈飞占了挺大一部分我的日常观看，另一个就是B站了</p>
+<h3 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h3><p>建立快一年了，主要的还是自己的一点点日常和图论什么的，还不错，争取到毕业时50篇</p>
 
       
     </div>
@@ -410,7 +388,7 @@ initial-scale=1, maximum-scale=1">
       
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
+            <a href="/tags/个人/" rel="tag"># 个人</a>
           
         </div>
       
@@ -423,8 +401,8 @@ initial-scale=1, maximum-scale=1">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/30/2018年年终盘点/" rel="next" title="2018年年终总结">
-                <i class="fa fa-chevron-left"></i> 2018年年终总结
+              <a href="/2019/05/16/image/Untitled/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -432,10 +410,6 @@ initial-scale=1, maximum-scale=1">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/01/枫语-3/" rel="prev" title="枫语-3">
-                枫语-3 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -492,8 +466,17 @@ initial-scale=1, maximum-scale=1">
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,6 +539,22 @@ initial-scale=1, maximum-scale=1">
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习"><span class="nav-number">1.</span> <span class="nav-text">学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#大考"><span class="nav-number">1.1.</span> <span class="nav-text">大考</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生物-amp-地理"><span class="nav-number">1.2.</span> <span class="nav-text">生物&amp;地理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏"><span class="nav-number">2.</span> <span class="nav-text">游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#活动"><span class="nav-number">3.</span> <span class="nav-text">活动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人际"><span class="nav-number">4.</span> <span class="nav-text">人际</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#体育"><span class="nav-number">5.</span> <span class="nav-text">体育</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信息学-amp-微笙"><span class="nav-number">6.</span> <span class="nav-text">信息学&amp;微笙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#音乐"><span class="nav-number">7.</span> <span class="nav-text">音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#影视"><span class="nav-number">8.</span> <span class="nav-text">影视</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#博客"><span class="nav-number">9.</span> <span class="nav-text">博客</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
