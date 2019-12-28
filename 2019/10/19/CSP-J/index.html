@@ -96,7 +96,7 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <meta name="keywords" content="学习,图论,">
+  <meta name="keywords" content="CSP-J,">
 
 
 
@@ -107,22 +107,18 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
-<meta name="keywords" content="学习,图论">
+<meta name="description" content="初赛说是挺水，但还是挺虚的，勉勉强强入复赛 复赛P1一道水题，就水过去呗 P2一道模拟题，老老实实跟着题目打就是了 P3">
+<meta name="keywords" content="CSP-J">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习笔记——图论——图的储存">
-<meta property="og:url" content="https://www.wnti.top/2019/02/20/学习笔记_图论_图的储存/index.html">
+<meta property="og:title" content="2019CSP-J">
+<meta property="og:url" content="https://www.wnti.top/2019/10/19/CSP-J/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
+<meta property="og:description" content="初赛说是挺水，但还是挺虚的，勉勉强强入复赛 复赛P1一道水题，就水过去呗 P2一道模拟题，老老实实跟着题目打就是了 P3">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2019/03/12/5c87c0948b305.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/13/5c889ad48f912.png">
-<meta property="og:image" content="https://i.loli.net/2019/03/13/5c889bbcb1d94.png">
-<meta property="og:updated_time" content="2019-03-27T14:34:10.677Z">
+<meta property="og:updated_time" content="2019-12-24T16:28:22.770Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习笔记——图论——图的储存">
-<meta name="twitter:description" content="在学过图论的基础名词之后，我们尝试把图存进电脑当中 有两三种储存方法： 矩阵储存和链式前向星 矩阵储存一条边有三个值：起点、终点、权值（一般默认为有权） 那我们用矩阵（二维数组）储存一个图， 即： 我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路 需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/12/5c87c0948b305.png">
+<meta name="twitter:title" content="2019CSP-J">
+<meta name="twitter:description" content="初赛说是挺水，但还是挺虚的，勉勉强强入复赛 复赛P1一道水题，就水过去呗 P2一道模拟题，老老实实跟着题目打就是了 P3">
 
 
 
@@ -152,13 +148,13 @@ initial-scale=1, maximum-scale=1">
 
 
 
-  <link rel="canonical" href="https://www.wnti.top/2019/02/20/学习笔记_图论_图的储存/">
+  <link rel="canonical" href="https://www.wnti.top/2019/10/19/CSP-J/">
 
 
 
 
 
-  <title>学习笔记——图论——图的储存 | 枫语</title>
+  <title>2019CSP-J | 枫语</title>
   
 
 
@@ -285,7 +281,7 @@ initial-scale=1, maximum-scale=1">
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/02/20/学习笔记_图论_图的储存/">
+    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/10/19/CSP-J/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="枫言">
@@ -302,7 +298,7 @@ initial-scale=1, maximum-scale=1">
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习笔记——图论——图的储存</h1>
+          <h1 class="post-title" itemprop="name headline">2019CSP-J</h1>
         
 
         <div class="post-meta">
@@ -314,8 +310,8 @@ initial-scale=1, maximum-scale=1">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T21:42:27+08:00">
-                2019-02-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-19T21:35:47+08:00">
+                2019-10-19
               </time>
             
 
@@ -333,8 +329,8 @@ initial-scale=1, maximum-scale=1">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/20/学习笔记_图论_图的储存/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/20/学习笔记_图论_图的储存/" itemprop="commentCount"></span>
+                <a href="/2019/10/19/CSP-J/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/19/CSP-J/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -362,45 +358,10 @@ initial-scale=1, maximum-scale=1">
       
 
       
-        <p>在学过图论的基础名词之后，我们尝试把图存进电脑当中</p>
-<p>有两三种储存方法：</p>
-<p>矩阵储存和链式前向星</p>
-<h1 id="矩阵储存"><a href="#矩阵储存" class="headerlink" title="矩阵储存"></a>矩阵储存</h1><p>一条边有三个值：起点、终点、权值（一般默认为有权）</p>
-<p>那我们用矩阵（二维数组）储存一个图，</p>
-<p>即：<img src="https://i.loli.net/2019/03/12/5c87c0948b305.png" alt="TIM截图20190312222113.png"></p>
-<p>我们可以用横列(i)来表示起点， 用竖列(j)来表示终点 ，那edge【i】【j】就表示从 i 点到 j 点的权值，也是比较直接的一个思路</p>
-<p>需要注意的是， 如果是一张无向图，那你再储存的时候就需要存两次，一次存 i -&gt; j 一次存 j -&gt; i ;如果是单向图的话只需要存一次 ，即 i -&gt; j </p>
-<p>空间是不是很浪费？有N个点就要有N^2的空间，如果查询一个点与其他几个点有关联，就需要遍历第 i 行，查询N次又是N^2</p>
-<p>这就是个问题，面对点多边少，你只能浪费空间了，怎么办？请继续看下去</p>
-<h1 id="前向星"><a href="#前向星" class="headerlink" title="前向星"></a>前向星</h1><p>前向星是什么？</p>
-<p>我们可以把所有的边抽象成三个数值，那给你一组数据，即起点、终点、权值    </p>
-<p>那我们开一个结构体数组，以边为基本单位，进行储存</p>
-<p>数组结构就是：</p>
-<p><img src="https://i.loli.net/2019/03/13/5c889ad48f912.png" alt="草图.png"></p>
-<p>那我们如果要找 i 点连出去的边呢？</p>
-<p>排序*1</p>
-<p>遍历*1</p>
-<p>那下一次查找呢？</p>
-<p>还要这样吗？</p>
-<p>那我们不如建个数组用来辅助，记录一下 i 点排序后的第一条边的下边</p>
-<p>最终效果就是：</p>
-<p><img src="https://i.loli.net/2019/03/13/5c889bbcb1d94.png" alt="前向星.png"></p>
-<p>看上去好像省了点，但有没有觉得这样太不灵活了？如果后面随边插入一条边，就又要走一遍任务</p>
-<p>那我们就融入链式对前向星进行优化</p>
-<h1 id="链式前向星"><a href="#链式前向星" class="headerlink" title="链式前向星"></a>链式前向星</h1><p>在前向星的基本思路上我们在插入时就可以有选择地插入</p>
-<p>由于我只会用数组和结构体，所以我就用数组来描述一下</p>
-<p>在边存进来时可能时一团糟的</p>
-<p>用head【i】储存以 i 为起点的最后一条边的下标</p>
-<p>然后在结构体edge 数组中定义三个量：终点、权值和上一条边的下标</p>
-<p>这样，我们就可以从head【i 】 开始找，由edge【head 【i】】.next一个一个向上寻找，直到找到.next == 0</p>
-<p>这就对所有起点为 i 的边进行遍历</p>
-<p>这种方法可以适应大多数情况</p>
-<p>那我就贴一下代码</p>
-<hr>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    edge[++cnt].to=y;</span><br><span class="line">    edge[cnt].from=head[x];</span><br><span class="line">    head[x]=cnt;</span><br><span class="line">    edge[cnt].w=v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>查询：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> next = head[x];next;next=edge[next].next)</span><br></pre></td></tr></table></figure>
-
+        <h1 id="初赛"><a href="#初赛" class="headerlink" title="初赛"></a>初赛</h1><p>说是挺水，但还是挺虚的，勉勉强强入复赛</p>
+<h1 id="复赛"><a href="#复赛" class="headerlink" title="复赛"></a>复赛</h1><h2 id="P1"><a href="#P1" class="headerlink" title="P1"></a>P1</h2><p>一道水题，就水过去呗</p>
+<h2 id="P2"><a href="#P2" class="headerlink" title="P2"></a>P2</h2><p>一道模拟题，老老实实跟着题目打就是了</p>
+<h2 id="P3"><a href="#P3" class="headerlink" title="P3"></a>P3</h2>
       
     </div>
     
@@ -417,9 +378,7 @@ initial-scale=1, maximum-scale=1">
       
         <div class="post-tags">
           
-            <a href="/tags/学习/" rel="tag"># 学习</a>
-          
-            <a href="/tags/图论/" rel="tag"># 图论</a>
+            <a href="/tags/CSP-J/" rel="tag"># CSP-J</a>
           
         </div>
       
@@ -432,8 +391,8 @@ initial-scale=1, maximum-scale=1">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/19/Warning/" rel="next" title="一次莫名其妙的事故">
-                <i class="fa fa-chevron-left"></i> 一次莫名其妙的事故
+              <a href="/2019/08/07/Blog一周年/" rel="next" title="Blog一周年庆">
+                <i class="fa fa-chevron-left"></i> Blog一周年庆
               </a>
             
           </div>
@@ -442,8 +401,8 @@ initial-scale=1, maximum-scale=1">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/20/学习笔记_图论_最小生成树/" rel="prev" title="学习笔记——图论——最小生成树">
-                学习笔记——图论——最小生成树 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/19/枫语-4（locked）/" rel="prev" title="枫语-4">
+                枫语-4 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +543,7 @@ initial-scale=1, maximum-scale=1">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵储存"><span class="nav-number">1.</span> <span class="nav-text">矩阵储存</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前向星"><span class="nav-number">2.</span> <span class="nav-text">前向星</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链式前向星"><span class="nav-number">3.</span> <span class="nav-text">链式前向星</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初赛"><span class="nav-number">1.</span> <span class="nav-text">初赛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复赛"><span class="nav-number">2.</span> <span class="nav-text">复赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#P1"><span class="nav-number">2.1.</span> <span class="nav-text">P1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2"><span class="nav-number">2.2.</span> <span class="nav-text">P2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P3"><span class="nav-number">2.3.</span> <span class="nav-text">P3</span></a></li></ol></li></ol></div>
             
 
           </div>
