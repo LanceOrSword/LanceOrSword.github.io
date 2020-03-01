@@ -107,17 +107,17 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占)2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面4.打开浏览器,找教程5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到Lin">
+<meta name="description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占) 2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面 4.打开浏览器,找教程 5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="枫语">
 <meta property="og:url" content="https://www.wnti.top/2019/02/07/初探Arch/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占)2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面4.打开浏览器,找教程5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到Lin">
+<meta property="og:description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占) 2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面 4.打开浏览器,找教程 5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-02-16T11:28:51.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="枫语">
-<meta name="twitter:description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占)2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面4.打开浏览器,找教程5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到Lin">
+<meta name="twitter:description" content="title:初探Arch  arch 使用工具：  Oracle VM VirtualBox  1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占) 2.载入启动盘 毫无疑问，archLinux.iso 3.选择第一个,等待，成功进入命令行界面 4.打开浏览器,找教程 5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable  挂载sda1到">
 
 
 
@@ -365,24 +365,43 @@ initial-scale=1, maximum-scale=1">
 <blockquote>
 <p>Oracle VM VirtualBox</p>
 </blockquote>
-<p>1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占)<br>2.载入启动盘 毫无疑问，<a href="http://mirrors.163.com/archlinux/iso/2019.02.01/" target="_blank" rel="noopener">archLinux.iso</a></p>
-<p>3.选择第一个,等待，成功进入命令行界面<br>4.打开浏览器,找<a href="https://www.cnblogs.com/vachester/p/5635819.html" target="_blank" rel="noopener">教程</a><br>5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable</p>
+<p>1.新建虚拟机 12GB(可能真的太大了，不过是动态分配，不会真12GB全占)<br>
+2.载入启动盘 毫无疑问，<a href="http://mirrors.163.com/archlinux/iso/2019.02.01/" target="_blank" rel="noopener">archLinux.iso</a></p>
+<p>3.选择第一个,等待，成功进入命令行界面<br>
+4.打开浏览器,找<a href="https://www.cnblogs.com/vachester/p/5635819.html" target="_blank" rel="noopener">教程</a><br>
+5.cfdisk - dos分区sda1、sda2,sda2要设置成bootable</p>
 <ol start="6">
 <li>挂载sda1到Linux根目录下 : mount /dev/sda1 /mnt</li>
 </ol>
 <p>8.<a href="https://blog.csdn.net/u013531940/article/details/79489454" target="_blank" rel="noopener">设置软件源</a></p>
 <pre><code>grep 163 /etc/pacman.d/mirrorlist &gt; bak
-
+ 
 cat bak &gt; /etc/pacman.d/mirrorlist
-
+ 
 pacman -Syy
-</code></pre><p>9.安装基本系统 : pacstrap /mnt base base-devel<br>10.起来喝口水<br>11.生成fstab : genfatb -U -p /mnt &gt;&gt; /mnt/etc/fstab<br>12.配置基础系统 : arch-chroot /mnt /bin/bash<br>13.设置locale<br>    13.1 locale语言 : nano /etc/locale.gen<br>        13.1.1 去掉en_US.UTF-8和zh_CN.UTF-8前的#<br>        13.1.2 CTRL+X<br>        13.1.3 Y<br>     13.2 locale时间 : ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  then   hwclock –systohc –utc<br>14.修改主机名 echo ___ &gt; /etc/hostname<br>15.设置自动连接网络 systemctl start dhcpcd  then systemctl enable dhcpcd<br>16.设置root密码 passwd<br>17.安装qrub </p>
+</code></pre>
+<p>9.安装基本系统 : pacstrap /mnt base base-devel<br>
+10.起来喝口水<br>
+11.生成fstab : genfatb -U -p /mnt &gt;&gt; /mnt/etc/fstab<br>
+12.配置基础系统 : arch-chroot /mnt /bin/bash<br>
+13.设置locale<br>
+13.1 locale语言 : nano /etc/locale.gen<br>
+13.1.1 去掉en_US.UTF-8和zh_CN.UTF-8前的#<br>
+13.1.2 CTRL+X<br>
+13.1.3 Y<br>
+13.2 locale时间 : ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  then   hwclock --systohc --utc<br>
+14.修改主机名 echo ___ &gt; /etc/hostname<br>
+15.设置自动连接网络 systemctl start dhcpcd  then systemctl enable dhcpcd<br>
+16.设置root密码 passwd<br>
+17.安装qrub</p>
 <pre><code>pacman -S grub os-prober
-
+ 
 grub-install --target=i386-pc --recheck /dev/sda
-
+ 
 grub-mkconfig -o /boot/grub/grub.cfg
-</code></pre><p>18.卸载分区，重启机器 exit  then      umount -R /mnt     then    reboot<br>19.卸掉引导盘</p>
+</code></pre>
+<p>18.卸载分区，重启机器 exit  then      umount -R /mnt     then    reboot<br>
+19.卸掉引导盘</p>
 
       
     </div>
@@ -494,7 +513,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
