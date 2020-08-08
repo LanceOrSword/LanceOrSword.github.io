@@ -107,18 +107,18 @@ initial-scale=1, maximum-scale=1">
 
 
 
-<meta name="description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
+<meta name="description" content="日期：2019.1.4   迷宫2 题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;s">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习BFS">
 <meta property="og:url" content="https://www.wnti.top/2019/02/01/学习/index.html">
 <meta property="og:site_name" content="枫语">
-<meta property="og:description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
+<meta property="og:description" content="日期：2019.1.4   迷宫2 题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;s">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-02-16T11:29:41.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习BFS">
-<meta name="twitter:description" content="日期：2019.1.4  迷宫2题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;str">
+<meta name="twitter:description" content="日期：2019.1.4   迷宫2 题解：  照题目上的框架敲好，就差不多了   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&amp;lt;iostream&amp;gt;#include&amp;lt;queue&amp;gt;using namespace std;s">
 
 
 
@@ -359,8 +359,10 @@ initial-scale=1, maximum-scale=1">
 
       
         <pre><code>日期：2019.1.4
-</code></pre><blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/16" target="_blank" rel="noopener">迷宫2</a><br>题解：</p>
+</code></pre>
+<blockquote>
+<p><a href="https://oj.creedowl.xyz/contest/19/problem/16" target="_blank" rel="noopener">迷宫2</a><br>
+题解：</p>
 <blockquote>
 <p>照题目上的框架敲好，就差不多了</p>
 </blockquote>
@@ -368,9 +370,13 @@ initial-scale=1, maximum-scale=1">
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span><span class="keyword">int</span> x,y,step;&#125;;</span><br><span class="line">node temp,b,e,t;</span><br><span class="line"><span class="built_in">queue</span>&lt;node&gt; q; </span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> a[<span class="number">2100</span>][<span class="number">2100</span>];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> dx[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> dy[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">	    &#123;</span><br><span class="line">		    	<span class="built_in">cin</span>&gt;&gt;a[i][j];</span><br><span class="line">	    		a[i][j]=!a[i][j];</span><br><span class="line">	    &#125;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;b.x&gt;&gt;b.y;</span><br><span class="line">    b.step=<span class="number">0</span>;</span><br><span class="line">    q.push(b);</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;e.x&gt;&gt;e.y;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">    	t=q.front();</span><br><span class="line">    	q.pop();</span><br><span class="line">     	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)</span><br><span class="line">    	&#123;</span><br><span class="line">        	temp.x=t.x+dx[i];</span><br><span class="line">        	temp.y=t.y+dy[i];</span><br><span class="line">        	temp.step=t.step+<span class="number">1</span>;</span><br><span class="line">        	</span><br><span class="line">        	<span class="keyword">if</span>(a[temp.x][temp.y] == <span class="number">1</span>)</span><br><span class="line">    		&#123;</span><br><span class="line">               	a[temp.x][temp.y] = <span class="number">0</span>;</span><br><span class="line">            	<span class="keyword">if</span>((temp.x == e.x) &amp;&amp; (temp.y == e.y))</span><br><span class="line">    			&#123;</span><br><span class="line">                	<span class="built_in">cout</span>&lt;&lt;temp.step;</span><br><span class="line">    				<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	        &#125;                  </span><br><span class="line">        	    <span class="keyword">else</span>	q.push(temp);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"No Answer!"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/21" target="_blank" rel="noopener">数字转换</a><br>题解：</p>
+<p><a href="https://oj.creedowl.xyz/contest/19/problem/21" target="_blank" rel="noopener">数字转换</a><br>
+题解：</p>
 <blockquote>
-<p>按照上一题的框架，但会面临一些问题，例如判重<br>看这个题目，六位的数字，也就是最大654321，对于int来说还是挺轻松的，可以bool a[7000],作为判重的数组<br>但题目给出了提示：<a href="https://baike.baidu.com/item/%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/7968428?fr=aladdin" target="_blank" rel="noopener">康托展开</a><br>那在程序中的实现就是：</p>
+<p>按照上一题的框架，但会面临一些问题，例如判重<br>
+看这个题目，六位的数字，也就是最大654321，对于int来说还是挺轻松的，可以bool a[7000],作为判重的数组<br>
+但题目给出了提示：<a href="https://baike.baidu.com/item/%E5%BA%B7%E6%89%98%E5%B1%95%E5%BC%80/7968428?fr=aladdin" target="_blank" rel="noopener">康托展开</a><br>
+那在程序中的实现就是：</p>
 </blockquote>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cantor</span><span class="params">(<span class="keyword">int</span> a[])</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp,num=<span class="number">0</span>,i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;<span class="number">6</span>;i++)&#123;</span><br><span class="line">	temp=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;=<span class="number">6</span>;j++)	<span class="keyword">if</span>(a[j]&lt;a[i]) temp++;</span><br><span class="line">	num+=fac[<span class="number">6</span>-i]*temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> num+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -380,19 +386,26 @@ initial-scale=1, maximum-scale=1">
 </blockquote>
 </blockquote>
 <blockquote>
-<p>相关题目:<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/23" target="_blank" rel="noopener">八数码难题</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/19" target="_blank" rel="noopener">黑白棋游戏</a><br>    <a href="https://oj.creedowl.xyz/contest/19/problem/20" target="_blank" rel="noopener">CoVH之再破难关</a></p>
+<p>相关题目:<br>
+<a href="https://oj.creedowl.xyz/contest/19/problem/23" target="_blank" rel="noopener">八数码难题</a><br>
+<a href="https://oj.creedowl.xyz/contest/19/problem/19" target="_blank" rel="noopener">黑白棋游戏</a><br>
+<a href="https://oj.creedowl.xyz/contest/19/problem/20" target="_blank" rel="noopener">CoVH之再破难关</a></p>
 </blockquote>
 <hr>
 <blockquote>
-<p><a href="https://oj.creedowl.xyz/contest/19/problem/26" target="_blank" rel="noopener">FloodFill(细胞)</a><br>题解：</p>
+<p><a href="https://oj.creedowl.xyz/contest/19/problem/26" target="_blank" rel="noopener">FloodFill(细胞)</a><br>
+题解：</p>
 <blockquote>
-<p>这道题（这类题）在我看来就是读入地图，逐一枚举，查到细胞就开始广搜，清空细胞，累加数目,输出<br>将BFS封成函数，查到细胞就调用，清除细胞</p>
+<p>这道题（这类题）在我看来就是读入地图，逐一枚举，查到细胞就开始广搜，清空细胞，累加数目,输出<br>
+将BFS封成函数，查到细胞就调用，清除细胞</p>
 </blockquote>
 </blockquote>
 <blockquote>
-<p>相关题目：<br>    <a href="https://oj.creedowl.xyz/contest/19/problem/25" target="_blank" rel="noopener">水坑</a><br>    <a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">岛屿的个数</a></p>
+<p>相关题目：<br>
+<a href="https://oj.creedowl.xyz/contest/19/problem/25" target="_blank" rel="noopener">水坑</a><br>
+<a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener">岛屿的个数</a></p>
 </blockquote>
-<p>​        </p>
+<p>​</p>
 
       
     </div>
