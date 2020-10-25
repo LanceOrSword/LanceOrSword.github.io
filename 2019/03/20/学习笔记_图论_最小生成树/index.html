@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, 
+initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+
+    (function(){
+
+        if(''){
+
+            if (prompt('请输入文章密码') !== ''){
+               
+		alert('密码错误！');
+                
+		history.back();
+
+            }
+
+        }
+
+    })();
+
+</script>
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="学习,图论,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
+<meta name="keywords" content="学习,图论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习笔记——图论——最小生成树">
+<meta property="og:url" content="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/index.html">
+<meta property="og:site_name" content="枫语">
+<meta property="og:description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c91d41fa5ff8.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/20/5c92477510ffd.png">
+<meta property="og:updated_time" content="2019-03-27T14:33:33.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习笔记——图论——最小生成树">
+<meta name="twitter:description" content="首先，了解一下什么叫最小生成树 最小生成树生成树就可以当作子图 那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小 这样的树可以解决什么问题呢？ 例题：  怎样解决这个问题呢？ Prim思想从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止 以例题来讲  从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/20/5c91d2162d487.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/">
+
+
+
+
+
+  <title>学习笔记——图论——最小生成树 | 枫语</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">枫语</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">疯语</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.wnti.top/2019/03/20/学习笔记_图论_最小生成树/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="枫言">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="枫语">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习笔记——图论——最小生成树</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T13:24:00+08:00">
+                2019-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/20/学习笔记_图论_最小生成树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/20/学习笔记_图论_最小生成树/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>首先，了解一下什么叫最小生成树</p>
+<h1 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h1><p>生成树就可以当作子图</p>
+<p>那最小生成树的意思就是用原有无向图的所有点组成新的一张图，这张新生成的图没有回路，每条边的权重和在所有子图中最小</p>
+<p>这样的树可以解决什么问题呢？</p>
+<p>例题：</p>
+<p><img src="https://i.loli.net/2019/03/20/5c91d2162d487.png" alt="Prim例题.png"></p>
+<p>怎样解决这个问题呢？</p>
+<h1 id="Prim"><a href="#Prim" class="headerlink" title="Prim"></a>Prim</h1><h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>从起点开始，每次寻找可以到达的点中权值最小的点，直到找遍图中所有点为止</p>
+<p>以例题来讲</p>
+<p><img src="https://i.loli.net/2019/03/20/5c91d41fa5ff8.png" alt="Prim例题-图.png"></p>
+<p>从 1 开始，找于它最近（相连边权值最小）的点，找到 2 ，把 2 入队</p>
+<p>现在考虑 1 和 2，在它们所能到达的点里，3 最近，就把 3 入队</p>
+<p>已经有3个点入队了，不可能再入队其他点了，结束</p>
+<p>现在我们看一下这棵生成树是不是最小的，显而易见，没有比它更小的方案了</p>
+<p>是不是感觉隐隐约约有点贪心的味道，每步都取最优，其实本质也可以说是贪心</p>
+<p>那我们再谈一谈实现：</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>我们要存图，为了方便<del>偷懒</del>，我就用矩阵存图</p>
+<p>那我们还需要什么呢？</p>
+<p>一个一维数组用来存到未入队点的距离，需要注意的是，我们在初始化这个数组的时候，除了出发点本身和出发点可以直接到达的点，其它都是无法到达的，最后的结果我们要最小，那初始化就初始化为最大</p>
+<p>一个布尔数组用来检查点有没有入队</p>
+<p>数据准备好了</p>
+<p>算法实现以  外层for循环  *（遍历所有点找最小加+对一维数组进行更新）</p>
+<p>核心代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		mininum=max_int;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)	<span class="keyword">if</span>(!v[j] &amp;&amp; mininum &gt; lc[j]) mininum=lc[j],pos=j;<span class="comment">//寻找最小的未用点</span></span><br><span class="line">		min_tree +=mininum,v[pos]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) <span class="keyword">if</span>(!v[j] &amp;&amp; lc[j]&gt;a[pos][j]) lc[j]= a[pos][j];<span class="comment">//更新数组</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h1><h2 id="思想-1"><a href="#思想-1" class="headerlink" title="思想"></a>思想</h2><p>Prim 以点为单位，Kruskal 则以边为单位，每次查找最短的边。</p>
+<p>需要注意的是，如果你单纯处理最短边很可能会出现环。</p>
+<p>所以，我们要对付一下环这种东西。</p>
+<p>怎么办，我们先找一找如果环有什么特征，如果引入其他数据结构可不可以从这个特征入手，解决出现环的问题？</p>
+<p>并查集就有用了</p>
+<p>每次我们联通两个点就对这两个点的祖先进行查找，如果相同的话放弃，不同就联通</p>
+<p>还是以样例为准来说</p>
+<p><img src="https://i.loli.net/2019/03/20/5c92477510ffd.png" alt="Kruskal例题.png"></p>
+<p>第一条，两个点没关系，最小生成树的值+=权值，两个点合并，</p>
+<p>第二条，也安然无恙</p>
+<p>第三条，发现两个点有共同的祖先，continue</p>
+<p>没了</p>
+<p>如果还有就继续</p>
+<h2 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h2><p>边我选择结构体存，然后一波经典并查集</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= m,i++)&#123;</span><br><span class="line">	<span class="keyword">if</span> (find(e[i].x) != find(e[i].y))	min_tree += e[i].points++;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">continue</span></span><br><span class="line">	<span class="keyword">if</span> (points = n<span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/图论/" rel="tag"># 图论</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/20/学习笔记_图论_图的储存/" rel="next" title="学习笔记——图论——图的储存">
+                <i class="fa fa-chevron-left"></i> 学习笔记——图论——图的储存
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/27/学习笔_图论_最短路/" rel="prev" title="学习笔记——图论——最短路">
+                学习笔记——图论——最短路 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODY5OC8xNTIyNg"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="枫言">
+            
+              <p class="site-author-name" itemprop="name">枫言</p>
+              <p class="site-description motion-element" itemprop="description">仰望星空，俯察内心，思之愈久，敬之愈深</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:a_mireux@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最小生成树"><span class="nav-number">1.</span> <span class="nav-text">最小生成树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Prim"><span class="nav-number">2.</span> <span class="nav-text">Prim</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-number">2.1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">2.2.</span> <span class="nav-text">代码实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kruskal"><span class="nav-number">3.</span> <span class="nav-text">Kruskal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想-1"><span class="nav-number">3.1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现-1"><span class="nav-number">3.2.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+  <i class="fa fa-star"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">枫言</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'UfGJNTU4X4mRC3FzOY9P8DvU-gzGzoHsz',
+        appKey: 'M5s030N49mYBiGTdrBzk3DRj',
+        placeholder: '畅所欲言，抑或不语',
+        avatar:'/images/avatar.png',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  undefined
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-hijiki"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
